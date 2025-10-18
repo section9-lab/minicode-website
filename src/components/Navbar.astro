@@ -1,0 +1,130 @@
+---
+export interface Props {
+  locale?: string;
+}
+
+const { locale = 'en' } = Astro.props;
+
+const translations = {
+  en: {
+    products: "Products",
+    contact: "Contact",
+    language: "Language"
+  },
+  zh: {
+    products: "产品",
+    contact: "联系我们",
+    language: "语言"
+  },
+  ja: {
+    products: "製品",
+    contact: "お問い合わせ",
+    language: "言語"
+  }
+};
+
+const t = translations[locale as keyof typeof translations] || translations.en;
+
+const languages = [
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' }
+];
+---
+
+<nav class="fixed top-0 w-full z-50 glass-morphism border-b border-white/20">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a
+        href="/"
+        class="text-2xl font-bold gradient-text animate-fade-in-left"
+      >
+        MiniCode
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {['products', 'contact'].map((item, index) => (
+          <a
+            key={item}
+            href={`/${item === 'products' ? '' : item}`}
+            class="nav-link animate-fade-in-down"
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            {t[item as keyof typeof t]}
+          </a>
+        ))}
+      </div>
+
+      <!-- Language Selector -->
+      <div class="flex items-center space-x-4">
+        <div class="relative group">
+          <button class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+            <span class="text-lg">{languages.find(lang => lang.code === locale)?.flag}</span>
+            <span class="text-sm font-medium hidden sm:inline">
+              {languages.find(lang => lang.code === locale)?.name}
+            </span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Language Dropdown -->
+          <div class="absolute right-0 mt-2 w-48 glass-morphism rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            {languages.map((lang) => (
+              <a
+                href={`/${lang.code === 'en' ? '' : lang.code}`}
+                class={`flex items-center space-x-3 px-4 py-3 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors ${
+                  locale === lang.code ? 'bg-blue-50 text-blue-600' : ''
+                }`}
+              >
+                <span class="text-lg">{lang.flag}</span>
+                <span class="text-sm font-medium">{lang.name}</span>
+                {locale === lang.code && (
+                  <svg class="w-4 h-4 ml-auto text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="hidden md:hidden mt-4 pt-4 border-t border-gray-200" id="mobile-menu">
+      {['products', 'contact'].map((item) => (
+        <a
+          key={item}
+          href={`/${item === 'products' ? '' : item}`}
+          class="block py-2 nav-link"
+        >
+          {t[item as keyof typeof t]}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<!-- Add spacing for fixed navbar -->
+<div class="h-20"></div>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

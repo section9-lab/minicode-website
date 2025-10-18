@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Hero } from '../components/ui/Hero';
-import { Features } from '../components/ui/Features';
-import { Products } from '../components/ui/Products';
-import { CTA } from '../components/ui/CTA';
-import { translations, type Locale } from '../lib/translations';
+import Layout from '../../layouts/Layout.astro';
+import { Hero } from '../../components/ui/Hero';
+import { Features } from '../../components/ui/Features';
+import { Products } from '../../components/ui/Products';
+import { CTA } from '../../components/ui/CTA';
+import { translations, type Locale } from '../../lib/translations';
 
-const locale = 'en'; // Default to English
+const locale = 'zh';
 
 const t = translations[locale as Locale] || translations.en;
 ---

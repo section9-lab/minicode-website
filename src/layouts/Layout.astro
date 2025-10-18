@@ -1,0 +1,28 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  locale?: string;
+}
+
+const { title, description, locale = 'en' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <BaseHead title={title} description={description} locale={locale} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Navbar locale={locale} />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>
