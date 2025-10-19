@@ -66,7 +66,7 @@ export const translations = {
           icon: "🚀",
           gradient: "from-green-500 to-teal-500",
           features: ["AI Builder", "Responsive Design", "SEO Optimized"],
-          link: "https://lovely.minicode.net.cn"
+          link: "https://open-lovely.minicode.net.cn"
         },
         {
           name: "OpenImagine",
@@ -75,7 +75,7 @@ export const translations = {
           icon: "💫",
           gradient: "from-orange-500 to-red-500",
           features: ["App Generation", "Cloud Storage", "Collaboration"],
-          link: "https://OpenImagine.minicode.net.cn"
+          link: "https://open-imagine.minicode.net.cn"
         },
         {
           name: "PeekMail",
@@ -182,7 +182,7 @@ export const translations = {
           icon: "🚀",
           gradient: "from-green-500 to-teal-500",
           features: ["AI 构建", "响应式设计", "SEO 优化"],
-          link: "https://lovely.minicode.net.cn"
+          link: "https://open-lovely.minicode.net.cn"
         },
         {
           name: "OpenImagine",
@@ -191,7 +191,7 @@ export const translations = {
           icon: "💫",
           gradient: "from-orange-500 to-red-500",
           features: ["应用生成", "云端存储", "协作功能"],
-          link: "https://OpenImagine.minicode.net.cn"
+          link: "https://open-imagine.minicode.net.cn"
         },
         {
           name: "PeekMail",
@@ -298,7 +298,7 @@ export const translations = {
           icon: "🚀",
           gradient: "from-green-500 to-teal-500",
           features: ["AIビルダー", "レスポンシブデザイン", "SEO最適化"],
-          link: "https://lovely.minicode.net.cn"
+          link: "https://open-lovely.minicode.net.cn"
         },
         {
           name: "OpenImagine",
@@ -307,7 +307,7 @@ export const translations = {
           icon: "💫",
           gradient: "from-orange-500 to-red-500",
           features: ["アプリ生成", "クラウドストレージ", "コラボレーション"],
-          link: "https://OpenImagine.minicode.net.cn"
+          link: "https://open-imagine.minicode.net.cn"
         },
         {
           name: "PeekMail",
