@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Globe } from 'lucide-react';
 
 interface Product {
   name: string;
@@ -8,6 +9,7 @@ interface Product {
   icon: string;
   gradient: string;
   features: string[];
+  link?: string;
 }
 
 interface ProductCardProps {
@@ -79,11 +81,35 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
-      </motion.a>
+        </motion.a>
+
+      {/* Globe Icon */}
+      {product.link && (
+        <motion.a
+          href={product.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-10 h-10 ml-3 rounded-full bg-gray-100 text-gray-600 transition-all duration-300 hover:shadow-lg z-10 relative"
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+            backgroundColor: "#f3f4f6"
+          }}
+          whileTap={{ scale: 0.95 }}
+          title="Visit Website"
+          onClick={(e) => {
+            // Also try to open manually as backup
+            window.open(product.link, '_blank');
+            e.stopPropagation();
+          }}
+        >
+          <Globe className="w-5 h-5" />
+        </motion.a>
+      )}
 
       {/* Decorative Elements */}
-      <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
-      <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
+      <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
+      <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
     </motion.div>
   );
 };

@@ -31,12 +31,14 @@ const t = translations[locale as Locale] || translations.en;
   />
 
   <!-- Products Section -->
-  <Products
-    title={t.products.title}
-    subtitle={t.products.subtitle}
-    products={t.products.items}
-    client:load
-  />
+  <section id="products">
+    <Products
+      title={t.products.title}
+      subtitle={t.products.subtitle}
+      products={t.products.items}
+      client:load
+    />
+  </section>
 
   <!-- CTA Section -->
   <CTA client:load />

@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogList from '../../components/ui/BlogList';
+import { getCollection } from 'astro:content';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'zh';
+const t = translations[locale as Locale] || translations.zh;
+
+// Get all blog posts and sort by date (newest first)
+const allPosts = await getCollection('blog');
+
+// Ensure we have an array to work with
+const postsArray = Array.isArray(allPosts) ? allPosts : Object.values(allPosts);
+
+const posts = postsArray
+  .filter((post: any) => post.data && post.data.locale === locale)
+  .sort((a: any, b: any) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
+
+// Filter out posts that are published in the future
+const publishedPosts = posts.filter((post: any) => new Date(post.data.publishDate) <= new Date());
+---
+
+<Layout title={`博客 - ${t.title}`} description={t.description} locale={locale}>
+  <BlogList posts={publishedPosts} locale={locale} client:load />
+</Layout>

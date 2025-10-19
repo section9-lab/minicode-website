@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { translations, type Locale } from '../lib/translations';
+
+const locale = 'en';
+const t = translations[locale as Locale] || translations.en;
+---
+
+<Layout title="Privacy Policy - MiniCode" description="Learn how MiniCode collects, uses, and protects your personal information." locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          Privacy Policy
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- Introduction -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. Introduction</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Welcome to MiniCode. We respect your privacy and are committed to protecting your personal information.
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you
+              visit our website minicode.dev and use our AI-powered development tools.
+            </p>
+          </div>
+
+          <!-- Information We Collect -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. Information We Collect</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Information You Provide to Us</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>Name and contact information (email address, phone number)</li>
+              <li>Account credentials and profile information</li>
+              <li>Payment information for premium services</li>
+              <li>Communications with our support team</li>
+              <li>Feedback and survey responses</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Information Automatically Collected</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>IP address and geolocation data</li>
+              <li>Browser type, operating system, and device information</li>
+              <li>Pages visited and time spent on our website</li>
+              <li>Clickstream data and navigation patterns</li>
+              <li>Cookies and similar tracking technologies</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Usage Data</h3>
+            <p class="text-gray-600 leading-relaxed">
+              We collect information about how you use our AI tools, including code generation patterns,
+              feature usage statistics, and performance metrics to improve our services.
+            </p>
+          </div>
+
+          <!-- How We Use Your Information -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. How We Use Your Information</h2>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>Provide, maintain, and improve our services</li>
+              <li>Process transactions and send related information</li>
+              <li>Send technical notices and support messages</li>
+              <li>Respond to comments, questions, and requests</li>
+              <li>Monitor and analyze usage patterns and trends</li>
+              <li>Detect, prevent, and address technical issues</li>
+              <li>Personalize your experience and deliver relevant content</li>
+              <li>Develop new features and services</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </div>
+
+          <!-- Information Sharing -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. Information Sharing</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">We Do Not Sell Your Information</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              MiniCode does not sell, trade, or otherwise transfer your personal information to third parties
+              without your consent, except as described in this policy.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Service Providers</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We may share information with trusted third-party service providers who assist us in operating
+              our website, conducting our business, or servicing our users. These providers have access to
+              personal information only to perform specific tasks on our behalf.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Legal Requirements</h3>
+            <p class="text-gray-600 leading-relaxed">
+              We may disclose your personal information if required by law or in good faith belief that such
+              action is necessary to comply with legal obligations, protect and defend our rights, or protect
+              the safety of our users.
+            </p>
+          </div>
+
+          <!-- Data Security -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. Data Security</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We implement appropriate technical and organizational measures to protect your personal
+              information against unauthorized access, alteration, disclosure, or destruction. These measures
+              include encryption, secure servers, and regular security audits.
+            </p>
+          </div>
+
+          <!-- Data Retention -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. Data Retention</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We retain your personal information only as long as necessary to fulfill the purposes outlined
+              in this Privacy Policy, unless a longer retention period is required or permitted by law.
+            </p>
+          </div>
+
+          <!-- Your Rights -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">7. Your Rights</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Depending on your location, you may have the following rights regarding your personal information:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>Access to your personal information</li>
+              <li>Correction of inaccurate information</li>
+              <li>Deletion of your personal information</li>
+              <li>Restriction of processing</li>
+              <li>Data portability</li>
+              <li>Object to processing</li>
+            </ul>
+          </div>
+
+          <!-- Cookies -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">8. Cookies and Tracking Technologies</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We use cookies and similar tracking technologies to enhance your experience on our website.
+              Cookies are small files stored on your device that help us understand how you use our services.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              You can control cookies through your browser settings. However, disabling cookies may affect
+              the functionality of our website. For more information, please refer to our
+              <a href="/cookies" class="text-blue-600 hover:text-blue-800 underline">Cookie Policy</a>.
+            </p>
+          </div>
+
+          <!-- Children's Privacy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">9. Children's Privacy</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Our services are not intended for children under 13 years of age. We do not knowingly
+              collect personal information from children under 13. If we become aware that we have
+              collected personal information from a child under 13, we will take steps to delete such
+              information immediately.
+            </p>
+          </div>
+
+          <!-- International Data Transfers -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">10. International Data Transfers</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Your personal information may be transferred to and processed in countries other than your
+              own. We ensure appropriate safeguards are in place to protect your information in accordance
+              with applicable data protection laws.
+            </p>
+          </div>
+
+          <!-- Changes to This Policy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">11. Changes to This Policy</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We may update this Privacy Policy from time to time. We will notify you of any changes by
+              posting the new policy on this page and updating the "Last updated" date at the top.
+            </p>
+          </div>
+
+          <!-- Contact Us -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">12. Contact Us</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              If you have any questions about this Privacy Policy, please contact us:
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>Email:</strong> privacy@minicode.dev</li>
+                <li><strong>Website:</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <a href="/terms" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Terms of Service
+          </a>
+          <a href="/cookies" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Cookie Policy
+          </a>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

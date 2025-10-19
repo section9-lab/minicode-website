@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogPost from '../../components/ui/BlogPost';
+import { getCollection } from 'astro:content';
+import { translations, type Locale } from '../../lib/translations';
+
+export async function getStaticPaths() {
+  const posts = Object.values(await getCollection('blog'));
+  return posts.map((post: any) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const locale = post.data.locale || 'en';
+const t = translations[locale as Locale] || translations.en;
+
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} - Blog - ${t.title}`} description={post.data.description} locale={locale}>
+  <BlogPost
+    post={post}
+    locale={locale}
+    client:load
+  />
+  <section class="container mx-auto px-6 py-12 max-w-4xl">
+    <div class="prose prose-lg max-w-none">
+      <div class="glass-morphism rounded-2xl p-8 md:p-12">
+        <Content />
+      </div>
+    </div>
+  </section>
+</Layout>

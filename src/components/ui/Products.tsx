@@ -9,6 +9,7 @@ interface Product {
   icon: string;
   gradient: string;
   features: string[];
+  link?: string;
 }
 
 interface ProductsProps {
@@ -43,27 +44,6 @@ export const Products: React.FC<ProductsProps> = ({ title, subtitle, products })
             <ProductCard key={product.name} product={product} index={index} />
           ))}
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <p className="text-gray-600 mb-6">
-            Ready to transform your workflow?
-          </p>
-          <motion.a
-            href="/contact"
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center justify-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started Today
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

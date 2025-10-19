@@ -1,0 +1,19 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProductDetail from '../../../components/ui/ProductDetail';
+import { translations, type Locale } from '../../../lib/translations';
+
+const locale = 'ja';
+const t = translations[locale as Locale] || translations.en;
+
+// Find EVO product data
+const product = t.products.items.find(item => item.name === 'EVO');
+
+if (!product) {
+  return Astro.redirect('/ja/products');
+}
+---
+
+<Layout title={`${product.name} - ${t.title}`} description={product.description} locale={locale}>
+  <ProductDetail product={product} client:load />
+</Layout>

@@ -1,4 +1,6 @@
 ---
+import { Twitter, Github, Linkedin } from 'lucide-react';
+
 export interface Props {
   locale?: string;
 }
@@ -14,10 +16,23 @@ const translations = {
       resources: "Resources",
       support: "Support"
     },
-    company: ["Careers"],
-    products: ["LazyResume", "Eva", "OpenLovble", "OpenImagine", "PeekMail"],
-    resources: ["Documentation", "API"],
-    support: ["Contact", "Help Center"]
+    company: [
+      { name: "Careers", href: "/careers" }
+    ],
+    products: [
+      { name: "LazyResume", href: "/products/lazyresume" },
+      { name: "EVO", href: "/products/evo" },
+      { name: "lovely", href: "/products/lovely" },
+      { name: "OpenImagine", href: "/products/openimagine" },
+      { name: "PeekMail", href: "/products/peekmail" }
+    ],
+    resources: [
+      { name: "Documentation", href: "/docs" },
+      { name: "API", href: "/api" }
+    ],
+    support: [
+      { name: "Contact", href: "/contact" },
+    ]
   },
   zh: {
     copyright: "© 2025 MiniCode | 由 AI 构建",
@@ -27,10 +42,23 @@ const translations = {
       resources: "资源",
       support: "支持"
     },
-    company: ["招聘"],
-    products: ["LazyResume", "Eva", "OpenLovble", "OpenImagine", "PeekMail"],
-    resources: ["文档", "API"],
-    support: ["联系我们", "帮助中心"]
+    company: [
+      { name: "招聘", href: "/zh/careers" }
+    ],
+    products: [
+      { name: "LazyResume", href: "/zh/products/lazyresume" },
+      { name: "EVO", href: "/zh/products/evo" },
+      { name: "lovely", href: "/zh/products/lovely" },
+      { name: "OpenImagine", href: "/zh/products/openimagine" },
+      { name: "PeekMail", href: "/zh/products/peekmail" }
+    ],
+    resources: [
+      { name: "文档", href: "/zh/docs" },
+      { name: "API", href: "/zh/api" }
+    ],
+    support: [
+      { name: "联系我们", href: "/zh/contact" },
+    ]
   },
   ja: {
     copyright: "© 2025 MiniCode | AIで構築",
@@ -40,10 +68,23 @@ const translations = {
       resources: "リソース",
       support: "サポート"
     },
-    company: ["採用"],
-    products: ["LazyResume", "Eva", "OpenLovble", "OpenImagine", "PeekMail"],
-    resources: ["ドキュメント", "API"],
-    support: ["お問い合わせ", "ヘルプセンター"]
+    company: [
+      { name: "採用", href: "/ja/careers" }
+    ],
+    products: [
+      { name: "LazyResume", href: "/ja/products/lazyresume" },
+      { name: "EVO", href: "/ja/products/evo" },
+      { name: "lovely", href: "/ja/products/lovely" },
+      { name: "OpenImagine", href: "/ja/products/openimagine" },
+      { name: "PeekMail", href: "/ja/products/peekmail" }
+    ],
+    resources: [
+      { name: "ドキュメント", href: "/ja/docs" },
+      { name: "API", href: "/ja/api" }
+    ],
+    support: [
+      { name: "お問い合わせ", href: "/ja/contact" },
+    ]
   }
 };
 
@@ -64,10 +105,9 @@ const t = translations[locale as keyof typeof translations] || translations.en;
           <!-- Social Links -->
           <div class="flex space-x-4">
             {[
-              { name: 'Twitter', icon: '𝕏', href: '#' },
-              { name: 'GitHub', icon: '⚡', href: '#' },
-              { name: 'LinkedIn', icon: 'in', href: '#' },
-              { name: 'Discord', icon: '💬', href: '#' }
+              { name: 'Twitter', icon: Twitter, href: '#' },
+              { name: 'GitHub', icon: Github, href: '#' },
+              { name: 'LinkedIn', icon: Linkedin, href: '#' },
             ].map((social) => (
               <a
                 key={social.name}
@@ -75,7 +115,7 @@ const t = translations[locale as keyof typeof translations] || translations.en;
                 class="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-blue-600 hover:border-blue-200 transition-all duration-300 hover:scale-110 hover:rotate-5 active:scale-95"
                 aria-label={social.name}
               >
-                <span class="text-sm font-bold">{social.icon}</span>
+                <social.icon class="w-5 h-5" />
               </a>
             ))}
           </div>
@@ -92,16 +132,22 @@ const t = translations[locale as keyof typeof translations] || translations.en;
           >
             <h4 class="font-semibold text-gray-900 mb-4">{title}</h4>
             <ul class="space-y-3">
-              {t[key as keyof typeof t.links].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    class="text-gray-600 hover:text-blue-600 transition-colors duration-200 hover:translate-x-1"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {t[key as keyof typeof t.links].map((item) => {
+                // Handle product items which are objects with name and href
+                const itemName = typeof item === 'object' ? item.name : item;
+                const itemHref = typeof item === 'object' ? item.href : `/${locale === 'en' ? '' : locale + '/'}${item.toLowerCase().replace(/\s+/g, '-')}`;
+
+                return (
+                  <li key={itemName}>
+                    <a
+                      href={itemHref}
+                      class="text-gray-600 hover:text-blue-600 transition-colors duration-200 hover:translate-x-1"
+                    >
+                      {itemName}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
@@ -116,14 +162,14 @@ const t = translations[locale as keyof typeof translations] || translations.en;
         </p>
 
         <div class="flex items-center space-x-6 mt-4 md:mt-0 animate-fade-in" style="animation-delay: 0.1s">
-          <a href="/privacy" class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
-            Privacy Policy
+          <a href={`/${locale === 'en' ? '' : locale + '/'}privacy`} class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
+            {locale === 'en' ? 'Privacy Policy' : locale === 'zh' ? '隐私政策' : 'プライバシーポリシー'}
           </a>
-          <a href="/terms" class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
-            Terms of Service
+          <a href={`/${locale === 'en' ? '' : locale + '/'}terms`} class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
+            {locale === 'en' ? 'Terms of Service' : locale === 'zh' ? '服务条款' : '利用規約'}
           </a>
-          <a href="/cookies" class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
-            Cookie Policy
+          <a href={`/${locale === 'en' ? '' : locale + '/'}cookies`} class="text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200">
+            {locale === 'en' ? 'Cookie Policy' : locale === 'zh' ? 'Cookie 政策' : 'Cookieポリシー'}
           </a>
         </div>
       </div>

@@ -8,18 +8,36 @@ const { locale = 'en' } = Astro.props;
 const translations = {
   en: {
     products: "Products",
+    blog: "Blog",
     contact: "Contact",
-    language: "Language"
+    language: "Language",
+    lazyResume: "LazyResume",
+    evo: "EVO",
+    lovely: "lovely",
+    openImagine: "OpenImagine",
+    peekMail: "PeekMail"
   },
   zh: {
     products: "产品",
+    blog: "博客",
     contact: "联系我们",
-    language: "语言"
+    language: "语言",
+    lazyResume: "LazyResume",
+    evo: "EVO",
+    lovely: "lovely",
+    openImagine: "OpenImagine",
+    peekMail: "PeekMail"
   },
   ja: {
     products: "製品",
+    blog: "ブログ",
     contact: "お問い合わせ",
-    language: "言語"
+    language: "言語",
+    lazyResume: "LazyResume",
+    evo: "EVO",
+    lovely: "lovely",
+    openImagine: "OpenImagine",
+    peekMail: "PeekMail"
   }
 };
 
@@ -29,6 +47,39 @@ const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'zh', name: '中文', flag: '🇨🇳' },
   { code: 'ja', name: '日本語', flag: '🇯🇵' }
+];
+
+const products = [
+  {
+    name: 'lazyResume',
+    displayName: t.lazyResume,
+    href: locale === 'en' ? '/products/lazyresume' : `/${locale}/products/lazyresume`,
+    icon: '📄'
+  },
+  {
+    name: 'evo',
+    displayName: t.evo,
+    href: locale === 'en' ? '/products/evo' : `/${locale}/products/evo`,
+    icon: '🤖'
+  },
+  {
+    name: 'lovely',
+    displayName: t.lovely,
+    href: locale === 'en' ? '/products/lovely' : `/${locale}/products/lovely`,
+    icon: '🚀'
+  },
+  {
+    name: 'openImagine',
+    displayName: t.openImagine,
+    href: locale === 'en' ? '/products/openimagine' : `/${locale}/products/openimagine`,
+    icon: '💫'
+  },
+  {
+    name: 'peekMail',
+    displayName: t.peekMail,
+    href: locale === 'en' ? '/products/peekmail' : `/${locale}/products/peekmail`,
+    icon: '✉️'
+  }
 ];
 ---
 
@@ -45,16 +96,46 @@ const languages = [
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        {['products', 'contact'].map((item, index) => (
-          <a
-            key={item}
-            href={`/${item === 'products' ? '' : item}`}
-            class="nav-link animate-fade-in-down"
-            style={`animation-delay: ${index * 0.1}s`}
-          >
-            {t[item as keyof typeof t]}
-          </a>
-        ))}
+        <!-- Products Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center space-x-1 nav-link animate-fade-in-down" style="animation-delay: 0s">
+            <span>{t.products}</span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Products Dropdown Menu -->
+          <div class="absolute left-0 mt-2 w-56 glass-morphism rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            {products.map((product) => (
+              <a
+                href={product.href}
+                class="flex items-center space-x-3 px-4 py-3 hover:bg-gray-100 first:rounded-t-lg last:rounded-b-lg transition-colors"
+              >
+                <span class="text-lg">{product.icon}</span>
+                <span class="text-sm font-medium">{product.displayName}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Blog Link -->
+        <a
+          href={locale === 'en' ? '/blog' : `/${locale}/blog`}
+          class="nav-link animate-fade-in-down"
+          style="animation-delay: 0.1s"
+        >
+          {t.blog}
+        </a>
+
+        <!-- Contact Link -->
+        <a
+          href={locale === 'en' ? '/contact' : `/${locale}/contact`}
+          class="nav-link animate-fade-in-down"
+          style="animation-delay: 0.2s"
+        >
+          {t.contact}
+        </a>
       </div>
 
       <!-- Language Selector -->
@@ -102,15 +183,44 @@ const languages = [
 
     <!-- Mobile Navigation -->
     <div class="hidden md:hidden mt-4 pt-4 border-t border-gray-200" id="mobile-menu">
-      {['products', 'contact'].map((item) => (
-        <a
-          key={item}
-          href={`/${item === 'products' ? '' : item}`}
-          class="block py-2 nav-link"
-        >
-          {t[item as keyof typeof t]}
-        </a>
-      ))}
+      <!-- Products Section -->
+      <div class="mb-4">
+        <button class="flex items-center justify-between w-full py-2 text-left nav-link" id="mobile-products-toggle">
+          <span>{t.products}</span>
+          <svg class="w-4 h-4 transition-transform" id="mobile-products-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Mobile Products Dropdown -->
+        <div class="hidden mt-2 pl-4 space-y-1" id="mobile-products-menu">
+          {products.map((product) => (
+            <a
+              href={product.href}
+              class="flex items-center space-x-3 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+            >
+              <span class="text-base">{product.icon}</span>
+              <span>{product.displayName}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Blog Link -->
+      <a
+        href={locale === 'en' ? '/blog' : `/${locale}/blog`}
+        class="block py-2 nav-link"
+      >
+        {t.blog}
+      </a>
+
+      <!-- Contact Link -->
+      <a
+        href={locale === 'en' ? '/contact' : `/${locale}/contact`}
+        class="block py-2 nav-link"
+      >
+        {t.contact}
+      </a>
     </div>
   </div>
 </nav>
@@ -121,10 +231,20 @@ const languages = [
 <script>
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileProductsToggle = document.getElementById('mobile-products-toggle');
+  const mobileProductsMenu = document.getElementById('mobile-products-menu');
+  const mobileProductsArrow = document.getElementById('mobile-products-arrow');
 
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  if (mobileProductsToggle && mobileProductsMenu && mobileProductsArrow) {
+    mobileProductsToggle.addEventListener('click', () => {
+      mobileProductsMenu.classList.toggle('hidden');
+      mobileProductsArrow.classList.toggle('rotate-180');
     });
   }
 </script>

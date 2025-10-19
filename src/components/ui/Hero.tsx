@@ -98,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.a
-              href="/products"
+              href="/#products"
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center justify-center text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({
             </motion.a>
 
             <motion.a
-              href="/about"
+              href="/contact"
               className="px-8 py-4 border border-gray-300 text-gray-700 rounded-full font-medium transition-all duration-300 hover:border-blue-500 hover:text-blue-600 text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -123,13 +123,13 @@ export const Hero: React.FC<HeroProps> = ({
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 "
+        className="absolute bottom-40 left-1/2 transform -translate-x-1/2 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
         <div className="flex flex-col items-center text-gray-400">
-          <span className="text-sm mb-2">Scroll to explore</span>
+          {/* <span className="text-sm mb-2">Scroll to explore</span> */}
           <motion.div
             className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center"
             animate={{ y: [0, 10, 0] }}

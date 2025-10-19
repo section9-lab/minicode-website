@@ -1,0 +1,367 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { translations, type Locale } from '../lib/translations';
+
+const locale = 'en';
+const t = translations[locale as Locale] || translations.en;
+---
+
+<Layout title="Careers - Join MiniCode Team" description="Build the future with us. Explore career opportunities at MiniCode." locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-6xl">
+      <!-- Hero Section -->
+      <div class="text-center mb-20">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          Join Our Team
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Help us build the future of AI-powered development tools. We're looking for passionate individuals who want to make an impact.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="glass-morphism rounded-lg px-6 py-3 text-center">
+            <div class="text-2xl font-bold text-blue-600">Remote-First</div>
+            <div class="text-sm text-gray-600">Work from anywhere</div>
+          </div>
+          <div class="glass-morphism rounded-lg px-6 py-3 text-center">
+            <div class="text-2xl font-bold text-purple-600">Growth</div>
+            <div class="text-sm text-gray-600">Learn & develop</div>
+          </div>
+          <div class="glass-morphism rounded-lg px-6 py-3 text-center">
+            <div class="text-2xl font-bold text-green-600">Impact</div>
+            <div class="text-sm text-gray-600">Shape the future</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open Positions -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Open Positions</h2>
+        <div class="grid gap-6">
+          <!-- Senior Frontend Developer -->
+          <div class="glass-morphism rounded-2xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Senior Frontend Developer</h3>
+                <div class="flex flex-wrap gap-3">
+                  <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                    Full-time
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">
+                    Remote
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">
+                    $120k - $180k
+                  </span>
+                </div>
+              </div>
+              <button class="mt-4 md:mt-0 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Apply Now
+              </button>
+            </div>
+            <div class="text-gray-600 mb-4">
+              <p class="mb-4">We're looking for an experienced frontend developer to help build beautiful, performant web applications using modern technologies like React, TypeScript, and Astro.</p>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Responsibilities:</h4>
+              <ul class="list-disc list-inside mb-4 space-y-1">
+                <li>Design and implement responsive, accessible user interfaces</li>
+                <li>Collaborate with product and design teams to create exceptional user experiences</li>
+                <li>Write clean, maintainable, and well-tested code</li>
+                <li>Mentor junior developers and contribute to technical decisions</li>
+                <li>Stay up-to-date with frontend best practices and emerging technologies</li>
+              </ul>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Requirements:</h4>
+              <ul class="list-disc list-inside space-y-1">
+                <li>5+ years of experience with modern frontend frameworks (React, Vue, or similar)</li>
+                <li>Strong proficiency in TypeScript, HTML, and CSS</li>
+                <li>Experience with state management libraries and testing frameworks</li>
+                <li>Understanding of responsive design and accessibility principles</li>
+                <li>Excellent problem-solving and communication skills</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Backend Developer -->
+          <div class="glass-morphism rounded-2xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Backend Developer</h3>
+                <div class="flex flex-wrap gap-3">
+                  <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                    Full-time
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">
+                    Remote
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">
+                    $110k - $160k
+                  </span>
+                </div>
+              </div>
+              <button class="mt-4 md:mt-0 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Apply Now
+              </button>
+            </div>
+            <div class="text-gray-600 mb-4">
+              <p class="mb-4">Join our backend team to build scalable, high-performance systems that power our AI-driven development tools.</p>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Responsibilities:</h4>
+              <ul class="list-disc list-inside mb-4 space-y-1">
+                <li>Design and develop RESTful APIs and microservices</li>
+                <li>Work with databases and optimize query performance</li>
+                <li>Implement authentication, authorization, and security best practices</li>
+                <li>Collaborate with frontend teams to integrate APIs</li>
+                <li>Monitor and maintain system performance and reliability</li>
+              </ul>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Requirements:</h4>
+              <ul class="list-disc list-inside space-y-1">
+                <li>4+ years of experience in backend development</li>
+                <li>Strong proficiency in Node.js, Python, or similar languages</li>
+                <li>Experience with cloud platforms (AWS, GCP, or Azure)</li>
+                <li>Knowledge of database design and optimization</li>
+                <li>Familiarity with containerization and CI/CD pipelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product Designer -->
+          <div class="glass-morphism rounded-2xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Product Designer</h3>
+                <div class="flex flex-wrap gap-3">
+                  <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                    Full-time
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">
+                    Remote
+                  </span>
+                  <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">
+                    $100k - $150k
+                  </span>
+                </div>
+              </div>
+              <button class="mt-4 md:mt-0 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+                Apply Now
+              </button>
+            </div>
+            <div class="text-gray-600 mb-4">
+              <p class="mb-4">We're seeking a talented product designer to create intuitive, beautiful interfaces for our AI-powered tools.</p>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Responsibilities:</h4>
+              <ul class="list-disc list-inside mb-4 space-y-1">
+                <li>Create wireframes, prototypes, and high-fidelity designs</li>
+                <li>Conduct user research and usability testing</li>
+                <li>Collaborate with product managers and engineers</li>
+                <li>Develop and maintain design systems and guidelines</li>
+                <li>Advocate for user-centered design principles</li>
+              </ul>
+
+              <h4 class="font-semibold text-gray-900 mb-2">Requirements:</h4>
+              <ul class="list-disc list-inside space-y-1">
+                <li>3+ years of experience in product design</li>
+                <li>Proficiency in Figma, Sketch, or similar design tools</li>
+                <li>Strong portfolio demonstrating design process and outcomes</li>
+                <li>Understanding of web and mobile design principles</li>
+                <li>Experience with user research and testing methodologies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company Culture -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Why Work With Us</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Innovation First</h3>
+            <p class="text-gray-600">Work on cutting-edge AI technology that's shaping the future of development</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Great Team</h3>
+            <p class="text-gray-600">Collaborate with talented, passionate people who support each other's growth</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Work-Life Balance</h3>
+            <p class="text-gray-600">Flexible schedules, generous time off, and respect for personal time</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Continuous Learning</h3>
+            <p class="text-gray-600">Access to courses, conferences, and resources to grow your skills</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Competitive Benefits</h3>
+            <p class="text-gray-600">Healthcare, retirement plans, and equity options</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Growth Opportunities</h3>
+            <p class="text-gray-600">Clear career paths and opportunities for advancement</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits Section -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Benefits & Perks</h2>
+        <div class="glass-morphism rounded-2xl p-8 border border-white/20">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Health & Wellness</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Comprehensive health, dental, and vision insurance
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Mental health support and wellness programs
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Gym membership reimbursement
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Financial</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Competitive salary and performance bonuses
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  401(k) with company matching
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Stock options and equity participation
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Time Off</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Unlimited paid time off
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Company holidays and winter break
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Paid parental leave
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Work Environment</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Flexible work hours and remote-first culture
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Home office stipend and equipment
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Team retreats and events
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">Ready to Join Us?</h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          If you don't see a position that fits but you're excited about what we're building, we'd still love to hear from you.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:careers@minicode.dev" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            Send Open Application
+          </a>
+          <button class="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m9.032 4.026a9.001 9.001 0 01-7.432 0m9.432-1.342A9.001 9.001 0 0112 3c-4.474 0-8.268 3.12-9.032 7.326m0 4.026A9.001 9.001 0 0012 21c4.474 0 8.268-3.12 9.032-7.326"></path>
+            </svg>
+            Follow Our Journey
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

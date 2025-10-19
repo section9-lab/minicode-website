@@ -1,0 +1,80 @@
+---
+title: "使用 Astro 构建现代网站指南"
+description: "探索 Astro 如何通过零 JavaScript 默认方法和岛屿架构革新网站开发。"
+author: "MiniCode 团队"
+tags: ["Astro", "网站开发", "性能", "JavaScript"]
+publishDate: 2024-01-15
+heroImage: "/images/blog/astro-website.jpg"
+locale: "zh"
+featured: true
+---
+
+# 使用 Astro 构建现代网站指南
+
+在当今快节奏的数字世界中，网站性能比以往任何时候都更加重要。用户期望闪电般的加载时间，搜索引擎也会优先考虑加载速度快的网站。进入 **Astro** - 一个正在改变我们对网站开发思维的现代网页框架。
+
+## Astro 的独特之处
+
+Astro 采用了一种独特的网站开发方法，即 **"零 JavaScript 默认"** 理念。与传统框架将 JavaScript 包发送到浏览器不同，Astro 在构建时将您的整个站点呈现为静态 HTML。
+
+### 岛屿架构
+
+Astro 引入了"岛屿"的概念 - 独立水合的交互式 UI 组件。这意味着：
+
+- 只有页面中需要交互性的部分才会获得 JavaScript
+- 静态内容保持为纯 HTML
+- 大幅减少包大小
+- 更快的初始页面加载
+
+## 性能优势
+
+使用 Astro 的性能改进是显著的：
+
+```javascript
+// 传统方法 - 所有内容都会被打包
+import React from 'react';
+import Component from './Component'; // 发送到浏览器
+import AnotherComponent from './Another'; // 发送到浏览器
+
+// Astro 方法 - 只有需要水合的内容
+import React from 'react'; // 仅在需要时
+import Component from './Component'; // 仅在交互时
+```
+
+## 多框架支持
+
+Astro 的突出特点之一是它能够在同一项目中使用来自多个框架的组件：
+
+- React 组件用于复杂的交互功能
+- Vue 组件用于轻量级 UI 元素
+- Svelte 组件用于高度交互的部分
+- Solid.js 组件用于最佳性能
+
+## 开始使用
+
+开始使用 Astro 非常简单：
+
+```bash
+npm create astro@latest my-astro-project
+cd my-astro-project
+npm run dev
+```
+
+## 实际应用
+
+在 MiniCode，我们利用 Astro 的能力来创建：
+
+1. **闪电般快速的产品页面**，加载时间低于 200ms
+2. **SEO 优化的博客文章**，在搜索结果中排名更高
+3. **渐进增强**，即使没有 JavaScript 也能工作
+4. **多语言支持**，开销最小
+
+## 结论
+
+Astro 代表了网站开发的未来 - 一个性能不以开发者体验为代价的未来。通过结合静态站点生成的最佳方法与现代组件框架，Astro 为我们提供了构建快速、高效和可维护网站的工具。
+
+无论您是在构建个人博客、电子商务网站还是复杂的网络应用程序，Astro 都为卓越性能提供了基础，而不会牺牲功能性。
+
+---
+
+*您已经尝试过 Astro 吗？在下面的评论中分享您的体验！*

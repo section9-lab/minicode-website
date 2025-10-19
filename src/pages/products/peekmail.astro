@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductDetail from '../../components/ui/ProductDetail';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'en';
+const t = translations[locale as Locale] || translations.en;
+
+// Find PeekMail product data
+const product = t.products.items.find(item => item.name === 'PeekMail');
+
+if (!product) {
+  return Astro.redirect('/');
+}
+---
+
+<Layout title={`${product.name} - ${t.title}`} description={product.description} locale={locale}>
+  <ProductDetail product={product} client:load />
+</Layout>

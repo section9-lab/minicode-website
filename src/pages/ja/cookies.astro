@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'ja';
+const t = translations[locale as Locale] || translations.ja;
+---
+
+<Layout title="Cookieポリシー - MiniCode" description="MiniCodeがウェブサイトでCookieと追跡技術をどのように使用するかについて説明します。" locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          Cookieポリシー
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          最終更新日：{new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- What Are Cookies -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. Cookieとは？</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Cookieは、ウェブサイトにアクセスした際にデバイス（コンピュータ、タブレット、または携帯電話）に保存される小さなテキストファイルです。
+              ウェブサイトをより効率的に機能させ、ウェブサイト所有者に情報を提供するために広く使用されています。
+            </p>
+          </div>
+
+          <!-- How We Use Cookies -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. Cookieの使用方法</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              私たちは様々な目的でCookieを使用して、ウェブサイトでのエクスペリエンスを向上させます：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>ウェブサイト機能に必須のCookie</li>
+              <li>ユーザー行動を理解するための分析Cookie</li>
+              <li>ウェブサイト速度を最適化するパフォーマンスCookie</li>
+              <li>設定を記憶する機能Cookie</li>
+              <li>パーソナライズされたコンテンツのマーケティングCookie</li>
+            </ul>
+          </div>
+
+          <!-- Types of Cookies We Use -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. 使用するCookieの種類</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">必須Cookie</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              これらのCookieはウェブサイトの機能に必須であり、当社のシステムでオフにすることはできません。
+              通常、サービスに対する要求となる行動に対してのみ設定されます。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">パフォーマンスCookie</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              これらのCookieにより、訪問数とトラフィックソースをカウントできるため、ウェブサイトのパフォーマンスを測定・改善できます。
+              どのページが最も人気があり、どのページが人気がないか、訪問者がサイト内をどのように移動するかを理解するのに役立ちます。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">機能Cookie</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              これらのCookieにより、ウェブサイトは拡張機能とパーソナライゼーションを提供できます。
+              私たちまたはページに追加した第三者サービスプロバイダーによって設定される場合があります。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">ターゲティングCookie</h3>
+            <p class="text-gray-600 leading-relaxed">
+              これらのCookieは、当社のウェブサイトを通じて広告パートナーによって設定される場合があり、
+              興味のプロファイルを構築し、他のサイトで関連広告を表示します。
+            </p>
+          </div>
+
+          <!-- Specific Cookies Used -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. 使用する具体的なCookie</h2>
+
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">セッションCookie</h3>
+              <p class="text-gray-600 leading-relaxed mb-2">
+                <strong>Cookie名：</strong> session_id, PHPSESSID<br>
+                <strong>目的：</strong> ユーザーセッションと認証状態の維持<br>
+                <strong>期間：</strong> セッション（ブラウザを閉じると削除）
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">分析Cookie</h3>
+              <p class="text-gray-600 leading-relaxed mb-2">
+                <strong>Cookie名：</strong> _ga, _gid, _gat<br>
+                <strong>目的：</strong> ウェブサイトトラフィック分析のためのGoogle Analytics<br>
+                <strong>期間：</strong> 2年 (_ga)、24時間 (_gid)、1分 (_gat)
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">設定Cookie</h3>
+              <p class="text-gray-600 leading-relaxed mb-2">
+                <strong>Cookie名：</strong> preferences, language, theme<br>
+                <strong>目的：</strong> ユーザー設定と環境設定の記憶<br>
+                <strong>期間：</strong> 1年
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">セキュリティCookie</h3>
+              <p class="text-gray-600 leading-relaxed mb-2">
+                <strong>Cookie名：</strong> csrf_token, auth_token<br>
+                <strong>目的：</strong> CSRF攻撃の防止と安全なセッションの維持<br>
+                <strong>期間：</strong> セッションまたは指定通り
+              </p>
+            </div>
+          </div>
+
+          <!-- Managing Cookies -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. Cookie設定の管理</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">ブラウザ設定</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ほとんどのウェブブラウザでは、ブラウザ設定を介してCookieを制御できます。
+              ただし、Cookieを無効にすると、ウェブサイトの一部の機能を使用する能力が制限される場合があります。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Cookie同意バナー</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              初めてウェブサイトにアクセスすると、非必須Cookieを受け入れるまたは拒否するCookie同意バナーが表示されます。
+              ウェブサイトフッターのCookie設定リンクをクリックして、いつでも設定を変更できます。
+            </p>
+          </div>
+
+          <!-- Contact Us -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. お問い合わせ</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              このCookieポリシーについて質問がある場合は、お問い合わせください：
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>メール：</strong> privacy@minicode.dev</li>
+                <li><strong>ウェブサイト：</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <button onclick="window.openCookieSettings()" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Cookie設定の管理
+          </button>
+          <a href="/ja/privacy" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            プライバシーポリシー
+          </a>
+          <a href="/ja/terms" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            利用規約
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Cookie consent management
+    window.openCookieSettings = function() {
+      // This would open a cookie settings modal
+      alert('Cookie設定モーダルがここで開きます。本番環境では、適切な設定インターフェースが開きます。');
+    };
+  </script>
+</Layout>

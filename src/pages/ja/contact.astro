@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from '../../components/ui/ContactForm';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'ja';
+const t = translations[locale as Locale] || translations.ja;
+---
+
+<Layout title={`お問い合わせ - ${t.title}`} description={t.description} locale={locale}>
+  <section className="py-20 px-6">
+    <div className="container mx-auto max-w-6xl">
+      <ContactForm locale={locale} translations={t} client:load />
+    </div>
+  </section>
+</Layout>

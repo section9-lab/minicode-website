@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { translations, type Locale } from '../lib/translations';
+
+const locale = 'en';
+const t = translations[locale as Locale] || translations.en;
+---
+
+<Layout title="Terms of Service - MiniCode" description="Read MiniCode's terms of service and user agreement for our AI-powered development tools." locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          Terms of Service
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- Agreement to Terms -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. Agreement to Terms</h2>
+            <p class="text-gray-600 leading-relaxed">
+              By accessing and using MiniCode's website minicode.dev and our AI-powered development tools
+              (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree
+              with any part of these terms, then you may not access the Service.
+            </p>
+          </div>
+
+          <!-- Description of Service -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. Description of Service</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              MiniCode provides AI-powered development tools and services designed to assist developers
+              in creating, optimizing, and managing their software projects. Our services include:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>AI-powered code generation and completion</li>
+              <li>Code optimization and refactoring suggestions</li>
+              <li>Project management and collaboration tools</li>
+              <li>Documentation generation</li>
+              <li>Performance analysis and recommendations</li>
+            </ul>
+          </div>
+
+          <!-- User Accounts -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. User Accounts</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Account Registration</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              To access certain features of the Service, you must register for an account. You agree to:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>Provide accurate, current, and complete information</li>
+              <li>Maintain and update your account information</li>
+              <li>Keep your password secure and confidential</li>
+              <li>Accept responsibility for all activities under your account</li>
+              <li>Notify us immediately of any unauthorized use</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Account Termination</h3>
+            <p class="text-gray-600 leading-relaxed">
+              We reserve the right to suspend or terminate your account at any time for violations of
+              these Terms or for any other reason at our sole discretion.
+            </p>
+          </div>
+
+          <!-- Acceptable Use -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. Acceptable Use</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              You agree to use the Service only for lawful purposes and in accordance with these Terms.
+              You agree NOT to:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>Use the Service for any illegal or unauthorized purpose</li>
+              <li>Generate malicious code, malware, or harmful software</li>
+              <li>Violate any applicable laws or regulations</li>
+              <li>Infringe upon intellectual property rights</li>
+              <li>Attempt to gain unauthorized access to our systems</li>
+              <li>Interfere with or disrupt the Service or servers</li>
+              <li>Use the Service to transmit spam, malware, or harmful content</li>
+              <li>Reverse engineer, decompile, or attempt to extract source code</li>
+            </ul>
+          </div>
+
+          <!-- Intellectual Property Rights -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. Intellectual Property Rights</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">MiniCode Rights</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              The Service and its original content, features, and functionality are and will remain the
+              exclusive property of MiniCode and its licensors. The Service is protected by copyright,
+              trademark, and other laws.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">User Content</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              You retain ownership of any content you create using our Service. However, you grant us a
+              worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display your
+              content solely for the purpose of providing and improving our Service.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Generated Code</h3>
+            <p class="text-gray-600 leading-relaxed">
+              You own the code generated by our AI tools. However, we are not responsible for the
+              functionality, security, or compliance of generated code.
+            </p>
+          </div>
+
+          <!-- Privacy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. Privacy</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Your privacy is important to us. Please review our Privacy Policy, which also governs your
+              use of the Service, to understand our practices.
+            </p>
+          </div>
+
+          <!-- Paid Services -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">7. Paid Services</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Subscription Plans</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Some features of the Service may require payment of subscription fees. By subscribing to
+              a paid plan, you agree to pay all applicable fees in advance.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Refund Policy</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We offer a 30-day money-back guarantee for new subscriptions. After 30 days, refunds are
+              provided at our sole discretion and may be subject to pro-rata calculations.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Payment Processing</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Payment processing is handled by third-party payment processors. We are not responsible for
+              their errors or failures, though we will work to resolve any issues that arise.
+            </p>
+          </div>
+
+          <!-- Disclaimer of Warranties -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">8. Disclaimer of Warranties</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. WE MAKE NO WARRANTIES,
+              EXPRESSED OR IMPLIED, AND HEREBY DISCLAIM ALL OTHER WARRANTIES INCLUDING, WITHOUT LIMITATION,
+              IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              We do not guarantee that the Service will be uninterrupted, timely, secure, or error-free.
+              Generated code should be thoroughly tested and reviewed before use in production environments.
+            </p>
+          </div>
+
+          <!-- Limitation of Liability -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">9. Limitation of Liability</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              IN NO EVENT SHALL MINICODE, OUR DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR
+              AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+              DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER
+              INTANGIBLE LOSSES, RESULTING FROM YOUR USE OF THE SERVICE.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Our total liability to you for all claims arising from or relating to the Service shall not
+              exceed the amount you paid to us in the twelve (12) months preceding the claim.
+            </p>
+          </div>
+
+          <!-- Indemnification -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">10. Indemnification</h2>
+            <p class="text-gray-600 leading-relaxed">
+              You agree to defend, indemnify, and hold harmless MiniCode and our affiliates from and
+              against any and all claims, damages, obligations, losses, liabilities, costs or debt,
+              and expenses (including but not limited to attorney's fees).
+            </p>
+          </div>
+
+          <!-- Termination -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">11. Termination</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We may terminate or suspend your account and bar access to the Service immediately,
+              without prior notice or liability, under our sole discretion, for any reason whatsoever
+              and without limitation.
+            </p>
+          </div>
+
+          <!-- Governing Law -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">12. Governing Law</h2>
+            <p class="text-gray-600 leading-relaxed">
+              These Terms shall be interpreted and governed by the laws of the jurisdiction in which
+              MiniCode operates, without regard to its conflict of law provisions.
+            </p>
+          </div>
+
+          <!-- Changes to Terms -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">13. Changes to Terms</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We reserve the right, at our sole discretion, to modify or replace these Terms at any time.
+              If a revision is material, we will try to provide at least 30 days notice prior to any new
+              terms taking effect.
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">14. Contact Information</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              If you have any questions about these Terms of Service, please contact us:
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>Email:</strong> legal@minicode.dev</li>
+                <li><strong>Website:</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <a href="/privacy" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            Privacy Policy
+          </a>
+          <a href="/cookies" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Cookie Policy
+          </a>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,250 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'zh';
+const t = translations[locale as Locale] || translations.zh;
+---
+
+<Layout title="服务条款 - MiniCode" description="阅读 MiniCode 的服务条款和用户协议。" locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          服务条款
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          最后更新：{new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- Agreement to Terms -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. 同意条款</h2>
+            <p class="text-gray-600 leading-relaxed">
+              通过访问和使用 MiniCode 的网站 minicode.dev 和我们的 AI 驱动开发工具（"服务"），
+              您同意受这些服务条款（"条款"）的约束。如果您不同意这些条款的任何部分，
+              那么您不能访问服务。
+            </p>
+          </div>
+
+          <!-- Description of Service -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. 服务描述</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              MiniCode 提供 AI 驱动的开发工具和服务，旨在帮助开发者创建、优化和管理他们的软件项目。
+              我们的服务包括：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>AI 驱动的代码生成和补全</li>
+              <li>代码优化和重构建议</li>
+              <li>项目管理和协作工具</li>
+              <li>文档生成</li>
+              <li>性能分析和建议</li>
+            </ul>
+          </div>
+
+          <!-- User Accounts -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. 用户账户</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">账户注册</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              要访问服务的某些功能，您必须注册账户。您同意：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>提供准确、当前和完整的信息</li>
+              <li>维护和更新您的账户信息</li>
+              <li>保持您的密码安全和机密</li>
+              <li>对您账户下的所有活动承担责任</li>
+              <li>立即通知我们任何未经授权的使用</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">账户终止</h3>
+            <p class="text-gray-600 leading-relaxed">
+              我们保留因违反这些条款或任何其他原因，根据我们的独立判断随时暂停或终止您账户的权利。
+            </p>
+          </div>
+
+          <!-- Acceptable Use -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. 可接受的使用</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              您同意仅将服务用于合法目的并遵守这些条款。您同意不：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>将服务用于任何非法或未经授权的目的</li>
+              <li>生成恶意代码、恶意软件或有害软件</li>
+              <li>违反任何适用的法律或法规</li>
+              <li>侵犯知识产权</li>
+              <li>试图未经授权访问我们的系统</li>
+              <li>干扰或中断服务或服务器</li>
+              <li>使用服务传输垃圾邮件、恶意软件或有害内容</li>
+              <li>反向工程、反编译或试图提取源代码</li>
+            </ul>
+          </div>
+
+          <!-- Intellectual Property Rights -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. 知识产权</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">MiniCode 权利</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              服务及其原始内容、功能和功能将是 MiniCode 及其许可方的专有财产。
+              服务受版权、商标和其他法律保护。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">用户内容</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              您保留使用我们服务创建的任何内容的所有权。但是，您授予我们全球性、非排他性、
+              免版税的许可，仅为了提供和改进我们的服务而使用、复制、修改和显示您的内容。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">生成的代码</h3>
+            <p class="text-gray-600 leading-relaxed">
+              您拥有我们 AI 工具生成代码的所有权。但是，我们不对生成代码的功能、
+              安全性或合规性负责。
+            </p>
+          </div>
+
+          <!-- Privacy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. 隐私</h2>
+            <p class="text-gray-600 leading-relaxed">
+              您的隐私对我们很重要。请查看我们的隐私政策，该政策也管辖您对服务的使用，
+              以了解我们的做法。
+            </p>
+          </div>
+
+          <!-- Paid Services -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">7. 付费服务</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">订阅计划</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              服务的某些功能可能需要支付订阅费用。通过订阅付费计划，
+              您同意提前支付所有适用的费用。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">退款政策</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              我们为新订阅提供 30 天退款保证。30 天后，退款由我们自行决定提供，
+              并可能受按比例计算的影响。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">支付处理</h3>
+            <p class="text-gray-600 leading-relaxed">
+              支付处理由第三方支付处理器处理。我们对他们的错误或故障不承担责任，
+              尽管我们将努力解决出现的任何问题。
+            </p>
+          </div>
+
+          <!-- Disclaimer of Warranties -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">8. 免责声明</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              服务按"原样"和"可用"基础提供。我们不作任何明示或暗示的保证，
+              并在此否认所有其他保证，包括但不限于适销性、特定用途适用性和非侵权的暗示保证。
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              我们不保证服务将不中断、及时、安全或无错误。生成的代码应在生产环境中使用之前
+              进行彻底测试和审查。
+            </p>
+          </div>
+
+          <!-- Limitation of Liability -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">9. 责任限制</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              在任何情况下，MiniCode、我们的董事、员工、合作伙伴、代理、供应商或关联公司
+              均不对任何间接、偶然、特殊、后果性或惩罚性损害承担责任，
+              包括但不限于利润、数据、使用、商誉或其他无形损失的损失。
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              我们对您因服务引起或与之相关的所有索赔的总责任不应超过您在提出索赔前的十二 (12) 个月内向我们支付的金额。
+            </p>
+          </div>
+
+          <!-- Indemnification -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">10. 赔偿</h2>
+            <p class="text-gray-600 leading-relaxed">
+              您同意为 MiniCode 和我们的关联公司辩护、赔偿并使其免受任何和所有索赔、损害、
+              义务、损失、责任、成本或债务以及费用（包括但不限于律师费）的损害。
+            </p>
+          </div>
+
+          <!-- Termination -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">11. 终止</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们可能根据我们的独立判断，出于任何原因，在没有任何事先通知或责任的情况下，
+              立即终止或暂停您的账户并禁止访问服务。
+            </p>
+          </div>
+
+          <!-- Governing Law -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">12. 管辖法律</h2>
+            <p class="text-gray-600 leading-relaxed">
+              这些条款应由 MiniCode 运营所在司法管辖区的法律解释和管辖，
+              不考虑其法律冲突条款。
+            </p>
+          </div>
+
+          <!-- Changes to Terms -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">13. 条款变更</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们保留根据我们的独立判断随时修改或替换这些条款的权利。
+              如果修订是重大的，我们将尽量在任何新条款生效前至少提前 30 天通知。
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">14. 联系信息</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              如果您对这些服务条款有任何疑问，请联系我们：
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>电子邮件：</strong> legal@minicode.dev</li>
+                <li><strong>网站：</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <a href="/zh/privacy" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            隐私政策
+          </a>
+          <a href="/zh/cookies" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Cookie 政策
+          </a>
+          <a href="/zh/contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            联系我们
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

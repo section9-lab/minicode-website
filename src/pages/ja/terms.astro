@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'ja';
+const t = translations[locale as Locale] || translations.ja;
+---
+
+<Layout title="利用規約 - MiniCode" description="MiniCodeの利用規約とユーザー規約をお読みください。" locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          利用規約
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          最終更新日：{new Date().toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- Agreement to Terms -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. 規約への同意</h2>
+            <p class="text-gray-600 leading-relaxed">
+              MiniCodeのウェブサイトminicode.devとAI駆動開発ツール（「サービス」）にアクセスし、
+              使用することで、あなたはこれらの利用規約（「規約」）に拘束されることに同意します。
+              これらの規約のいずれかの部分に同意しない場合、サービスにアクセスすることはできません。
+            </p>
+          </div>
+
+          <!-- Description of Service -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. サービスの説明</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              MiniCodeは、開発者がソフトウェアプロジェクトを作成、最適化、管理するのを支援する
+              AI駆動開発ツールとサービスを提供します。私たちのサービスには以下が含まれます：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>AI駆動のコード生成と補完</li>
+              <li>コード最適化とリファクタリング提案</li>
+              <li>プロジェクト管理とコラボレーションツール</li>
+              <li>ドキュメント生成</li>
+              <li>パフォーマンス分析と推奨事項</li>
+            </ul>
+          </div>
+
+          <!-- User Accounts -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. ユーザーアカウント</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">アカウント登録</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              サービスの特定の機能にアクセスするには、アカウントを登録する必要があります。あなたは以下に同意します：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>正確、最新、完全な情報を提供する</li>
+              <li>アカウント情報を維持・更新する</li>
+              <li>パスワードを安全・機密に保つ</li>
+              <li>アカウント下のすべての活動に責任を負う</li>
+              <li>不正使用を直ちに通知する</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">アカウント終了</h3>
+            <p class="text-gray-600 leading-relaxed">
+              私たちは、規約違反またはその他の理由により、独自の判断でアカウントを停止または終了する権利を留保します。
+            </p>
+          </div>
+
+          <!-- Acceptable Use -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. 許容される使用</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              あなたは、合法的な目的のみでサービスを使用し、これらの規約に従って使用することに同意します。あなたは以下をしないことに同意します：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>違法または不正な目的でサービスを使用する</li>
+              <li>悪意のあるコード、マルウェア、有害ソフトウェアを生成する</li>
+              <li>適用される法律または規制に違反する</li>
+              <li>知的財産権を侵害する</li>
+              <li>当社のシステムへの不正アクセスを試みる</li>
+              <li>サービスまたはサーバーを妨害・中断する</li>
+              <li>スパム、マルウェア、有害コンテンツを送信するためにサービスを使用する</li>
+              <li>リバースエンジニアリング、逆コンパイル、ソースコード抽出を試みる</li>
+            </ul>
+          </div>
+
+          <!-- Intellectual Property Rights -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. 知的財産権</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">MiniCodeの権利</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              サービスとその独自のコンテンツ、機能、機能性はMiniCodeとそのライセンサーの専有財産であり、留保されます。
+              サービスは著作権、商標、その他の法律によって保護されています。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">ユーザーコンテンツ</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              あなたはサービスを使用して作成したコンテンツの所有権を保持します。ただし、サービスの提供と改善のみを目的として、
+              あなたのコンテンツを使用、複製、修正、表示するための非独占的、ロイヤリティフリーのライセンスを当社に付与します。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">生成されたコード</h3>
+            <p class="text-gray-600 leading-relaxed">
+              あなたはAIツールが生成したコードの所有権を持ちます。ただし、生成されたコードの機能、
+              セキュリティ、コンプライアンスについては責任を負いません。
+            </p>
+          </div>
+
+          <!-- Privacy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. プライバシー</h2>
+            <p class="text-gray-600 leading-relaxed">
+              あなたのプライバシーは当社にとって重要です。サービスの使用も管理するプライバシーポリシーをご確認ください。
+            </p>
+          </div>
+
+          <!-- Paid Services -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">7. 有料サービス</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">サブスクリプションプラン</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              サービスの一部の機能にはサブスクリプション料金の支払いが必要な場合があります。有料プランをサブスクライブすることで、
+              適用されるすべての料金を前払いすることに同意します。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">返金ポリシー</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              新規サブスクリプションには30日間の返金保証を提供します。30日後、返金は当社の独自の判断で提供され、
+              比例配分計算の対象となる場合があります。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">決済処理</h3>
+            <p class="text-gray-600 leading-relaxed">
+              決済処理は第三者決済プロセッサによって処理されます。エラーや障害については責任を負いませんが、
+              発生した問題の解決に努めます。
+            </p>
+          </div>
+
+          <!-- Disclaimer of Warranties -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">8. 保証の否認</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              サービスは「現状のまま」および「利用可能なまま」の基準で提供されます。明示または黙示を問わず、
+              すべての保証を否認し、これには merchantability、特定目的適合性、非侵害の黙示保証が含まれますが、これらに限定されません。
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              サービスが中断されず、タイムリー、安全、またはエラーフリーであることを保証しません。生成されたコードは、
+              本番環境で使用する前に徹底的にテストおよびレビューする必要があります。
+            </p>
+          </div>
+
+          <!-- Limitation of Liability -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">9. 責任制限</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              いかなる場合も、MiniCode、取締役、従業員、パートナー、代理店、サプライヤー、
+              または関連会社は、サービスの使用から生じる、またはそれに関連するすべてのクレームについて、
+              間接的、偶発的、特別、結果的、または懲罰的損害（利益、データ、使用、 goodwill、またはその他の無形損失の損失を含むがこれらに限定されない）について責任を負いません。
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              私たちのあなたに対する総責任は、クレームの前の12ヶ月間に私たちに支払った金額を超えません。
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">10. 連絡先情報</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              この利用規約について質問がある場合は、お問い合わせください：
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>メール：</strong> legal@minicode.dev</li>
+                <li><strong>ウェブサイト：</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <a href="/ja/privacy" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            プライバシーポリシー
+          </a>
+          <a href="/ja/cookies" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Cookieポリシー
+          </a>
+          <a href="/ja/contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            お問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

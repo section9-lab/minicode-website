@@ -1,0 +1,98 @@
+---
+title: "ウェブパフォーマンス最適化技術"
+description: "最新のウェブパフォーマンス最適化手法を学び、ユーザー体験を向上させる方法を探ります。"
+author: "MiniCodeチーム"
+tags: ["パフォーマンス", "最適化", "ウェブ開発", "UX"]
+publishDate: 2024-01-05
+heroImage: "/images/blog/web-performance.jpg"
+locale: "ja"
+featured: false
+---
+
+# ウェブパフォーマンス最適化技術
+
+現代のウェブ開発において、パフォーマンスはユーザー体験の重要な要素です。この記事では、最新のウェブパフォーマンス最適化技術について詳しく解説します。
+
+## パフォーマンス指標の理解
+
+### Core Web Vitals
+
+1. **LCP (Largest Contentful Paint)**
+   - 主要なコンテンツが表示されるまでの時間
+   - 目標：2.5秒以内
+
+2. **FID (First Input Delay)**
+   - 最初のユーザーインタラクションまでの時間
+   - 目標：100ミリ秒以内
+
+3. **CLS (Cumulative Layout Shift)**
+   - 予期しないレイアウトシフトの度合い
+   - 目標：0.1以下
+
+## 最適化手法
+
+### 1. 画像最適化
+
+```javascript
+// 遅延読み込みの実装
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      observer.unobserve(img);
+    }
+  });
+});
+
+document.querySelectorAll('img[data-src]').forEach(img => {
+  imageObserver.observe(img);
+});
+```
+
+### 2. コード分割
+
+```javascript
+// 動的インポートの例
+const loadModule = async () => {
+  const { default: module } = await import('./heavy-module.js');
+  module.doSomething();
+};
+```
+
+### 3. キャッシュ戦略
+
+```javascript
+// Service Workerの実装
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
+```
+
+## ツールとテクニック
+
+### パフォーマンス監視ツール
+
+- Lighthouse
+- WebPageTest
+- Chrome DevTools Performance Panel
+
+### 最適化ライブラリ
+
+- React.lazy() と Suspense
+- Vue の非同期コンポーネント
+- Webpack のコード分割
+
+## 実践的なヒント
+
+1. **リソースの事前読み込み**
+2. **クリティカルCSSのインライン化**
+3. **サーバーレスポンスタイムの最適化**
+4. **CDNの活用**
+
+---
+
+*この記事がウェブパフォーマンスの改善に役立つことを願っています。*

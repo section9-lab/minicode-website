@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'zh';
+const t = translations[locale as Locale] || translations.zh;
+---
+
+<Layout title="隐私政策 - MiniCode" description="了解 MiniCode 如何收集、使用和保护您的个人信息。" locale={locale}>
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          隐私政策
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          最后更新：{new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <div class="glass-morphism rounded-2xl p-8 md:p-12 space-y-8">
+
+          <!-- Introduction -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. 引言</h2>
+            <p class="text-gray-600 leading-relaxed">
+              欢迎使用 MiniCode。我们尊重您的隐私，并致力于保护您的个人信息。
+              本隐私政策解释了当您访问我们的网站 minicode.dev 和使用我们的 AI 驱动开发工具时，
+              我们如何收集、使用、披露和保护您的信息。
+            </p>
+          </div>
+
+          <!-- Information We Collect -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. 我们收集的信息</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">您提供的信息</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>姓名和联系信息（电子邮件地址、电话号码）</li>
+              <li>账户凭据和个人资料信息</li>
+              <li>付费服务的信息</li>
+              <li>与我们支持团队的通信</li>
+              <li>反馈和调查回复</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">自动收集的信息</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+              <li>IP 地址和地理位置数据</li>
+              <li>浏览器类型、操作系统和设备信息</li>
+              <li>访问的页面和在网站上花费的时间</li>
+              <li>点击流数据和导航模式</li>
+              <li>Cookie 和类似的跟踪技术</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">使用数据</h3>
+            <p class="text-gray-600 leading-relaxed">
+              我们收集有关您如何使用我们 AI 工具的信息，包括代码生成模式、
+              功能使用统计和性能指标，以改进我们的服务。
+            </p>
+          </div>
+
+          <!-- How We Use Your Information -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. 我们如何使用您的信息</h2>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>提供、维护和改进我们的服务</li>
+              <li>处理交易并发送相关信息</li>
+              <li>发送技术通知和支持消息</li>
+              <li>回复评论、问题和请求</li>
+              <li>监控和分析使用模式和趋势</li>
+              <li>检测、预防和解决技术问题</li>
+              <li>个性化您的体验并提供相关内容</li>
+              <li>开发新功能和服务</li>
+              <li>遵守法律义务</li>
+            </ul>
+          </div>
+
+          <!-- Information Sharing -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">4. 信息共享</h2>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">我们不出售您的信息</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              MiniCode 不会在未经您同意的情况下出售、交易或以其他方式向第三方
+              转让您的个人信息，除非本政策中另有说明。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">服务提供商</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              我们可能与可信赖的第三方服务提供商共享信息，这些提供商协助我们运营
+              网站、开展业务或为我们的用户提供服务。这些提供商仅为代表我们执行特定任务
+              而访问个人信息。
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">法律要求</h3>
+            <p class="text-gray-600 leading-relaxed">
+              如果法律要求或我们善意认为此类行动对于遵守法律义务、保护
+              和捍卫我们的权利或保护我们用户的安全是必要的，我们可能会披露您的个人信息。
+            </p>
+          </div>
+
+          <!-- Data Security -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">5. 数据安全</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们实施适当的技术和组织措施来保护您的个人信息免受未经授权的访问、
+              更改、披露或销毁。这些措施包括加密、安全服务器和定期安全审计。
+            </p>
+          </div>
+
+          <!-- Data Retention -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">6. 数据保留</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们仅在为实现本隐私政策中概述的目的所需的时间内保留您的个人信息，
+              除非法律要求或允许更长的保留期限。
+            </p>
+          </div>
+
+          <!-- Your Rights -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">7. 您的权利</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              根据您的所在地，您可能拥有以下关于您个人信息的权利：
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>访问您的个人信息</li>
+              <li>更正不准确的信息</li>
+              <li>删除您的个人信息</li>
+              <li>限制处理</li>
+              <li>数据可移植性</li>
+              <li>反对处理</li>
+            </ul>
+          </div>
+
+          <!-- Cookies -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">8. Cookie 和跟踪技术</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              我们使用 Cookie 和类似的跟踪技术来增强您在我们网站上的体验。
+              Cookie 是存储在您设备上的小文件，帮助我们了解您如何使用我们的服务。
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              您可以通过浏览器设置控制 Cookie。但是，禁用 Cookie 可能会影响
+              我们网站的功能。有关更多信息，请参阅我们的
+              <a href="/zh/cookies" class="text-blue-600 hover:text-blue-800 underline">Cookie 政策</a>。
+            </p>
+          </div>
+
+          <!-- Children's Privacy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">9. 儿童隐私</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们的服务不适用于 13 岁以下的儿童。我们不会在知情的情况下
+              收集 13 岁以下儿童的个人信息。如果我们发现我们收集了 13 岁以下儿童的个人信息，
+              我们将采取步骤立即删除此类信息。
+            </p>
+          </div>
+
+          <!-- International Data Transfers -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">10. 国际数据传输</h2>
+            <p class="text-gray-600 leading-relaxed">
+              您的个人信息可能会被传输到您所在国家以外的地区并在那里进行处理。
+              我们确保根据适用的数据保护法律采取适当的保障措施来保护您的信息。
+            </p>
+          </div>
+
+          <!-- Changes to This Policy -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">11. 政策变更</h2>
+            <p class="text-gray-600 leading-relaxed">
+              我们可能会不时更新此隐私政策。我们将通过在此页面上发布新政策
+              并更新顶部的"最后更新"日期来通知您任何更改。
+            </p>
+          </div>
+
+          <!-- Contact Us -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">12. 联系我们</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              如果您对此隐私政策有任何疑问，请联系我们：
+            </p>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <ul class="space-y-2 text-gray-600">
+                <li><strong>电子邮件：</strong> privacy@minicode.dev</li>
+                <li><strong>网站：</strong> <a href="https://minicode.dev" class="text-blue-600 hover:text-blue-800 underline">https://minicode.dev</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap gap-4 justify-center">
+          <a href="/zh/terms" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            服务条款
+          </a>
+          <a href="/zh/cookies" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            Cookie 政策
+          </a>
+          <a href="/zh/contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            联系我们
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

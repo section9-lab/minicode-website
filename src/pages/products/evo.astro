@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { translations, type Locale } from '../../lib/translations';
+
+const locale = 'en';
+const t = translations[locale as Locale] || translations.en;
+
+// Find EVO product data
+const product = t.products.items.find(item => item.name === 'EVO');
+
+if (!product) {
+  return Astro.redirect('/');
+}
+---
+
+<Layout title={`${product.name} - ${t.title}`} description={product.description} locale={locale}>
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div class="container mx-auto px-6 py-12">
+      <!-- Back Button -->
+      <a href="/" class="inline-flex items-center space-x-2 mb-8 text-gray-600 hover:text-gray-900 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Back to Home</span>
+      </a>
+
+      <!-- Product Header -->
+      <div class="text-center mb-16">
+        <div class={`inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-r ${product.gradient} text-white text-4xl mb-6`}>
+          {product.icon}
+        </div>
+
+        <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          {product.name}
+        </h1>
+
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+          {product.description}
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center justify-center space-x-4">
+          {product.link && (
+            <a
+              href={product.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${product.gradient} text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg`}
+            >
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              Visit Website
+            </a>
+          )}
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Key Features
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {product.features.map((feature) => (
+            <div class="glass-morphism rounded-xl p-6 text-center border border-white/20">
+              <div class={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r ${product.gradient} text-white mb-4`}>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                {feature}
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Experience the power of {feature} in our innovative solution.
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="max-w-4xl mx-auto mt-20">
+        <div class="glass-morphism rounded-2xl p-8 border border-white/20">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">
+            Why Choose {product.name}?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Innovation</h3>
+              <p class="text-gray-600 leading-relaxed">
+                {product.name} represents the cutting edge of technology, designed to solve real-world problems with elegant and efficient solutions.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Reliability</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Built with robust architecture and best practices, ensuring consistent performance and user satisfaction.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">User Experience</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Intuitive design and seamless integration make {product.name} accessible to users of all skill levels.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-900">Support</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Comprehensive documentation and responsive support ensure you get the most out of {product.name}.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

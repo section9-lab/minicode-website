@@ -21,6 +21,7 @@ const t = translations[locale as Locale] || translations.en;
     secondaryCta={t.hero.cta.secondary}
     client:load
   />
+  </section>
 
   <!-- Features Section -->
   <Features
@@ -29,14 +30,16 @@ const t = translations[locale as Locale] || translations.en;
     features={t.features.items}
     client:load
   />
+  </section>
 
-  <!-- Products Section -->
+  <section id="products">
   <Products
     title={t.products.title}
     subtitle={t.products.subtitle}
     products={t.products.items}
     client:load
   />
+  </section>
 
   <!-- CTA Section -->
   <CTA client:load />
