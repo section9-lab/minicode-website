@@ -18,7 +18,7 @@ interface ProductDetailProps {
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
   const handleBack = () => {
-    window.location.href = '/products';
+    window.location.href = '/';
   };
 
   return (
@@ -32,7 +32,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
           whileTap={{ scale: 0.95 }}
         >
           <ArrowLeft className="w-5 h-5" />
-          <span>Back to Products</span>
+          <span>Back to Home</span>
         </motion.button>
 
         {/* Product Header */}

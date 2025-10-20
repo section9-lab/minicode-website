@@ -60,7 +60,7 @@ export const translations = {
           link: "https://microsoftedge.microsoft.com/addons/detail/dfchiimkbfcfddmgaplgjdceipopeohn"
         },
         {
-          name: "lovely",
+          name: "OpenLovely",
           description: "AI website builder for creating intelligent sites quickly",
           learnMore: "Learn More",
           icon: "🚀",
@@ -176,7 +176,7 @@ export const translations = {
           link: "https://microsoftedge.microsoft.com/addons/detail/dfchiimkbfcfddmgaplgjdceipopeohn"
         },
         {
-          name: "lovely",
+          name: "OpenLovely",
           description: "AI 建站平台，快速创建智能网站",
           learnMore: "了解更多",
           icon: "🚀",
@@ -292,7 +292,7 @@ export const translations = {
           link: "https://microsoftedge.microsoft.com/addons/detail/dfchiimkbfcfddmgaplgjdceipopeohn"
         },
         {
-          name: "lovely",
+          name: "OpenLovely",
           description: "インテリジェントなサイトを素早く作成するAIウェブサイトビルダー",
           learnMore: "詳細を見る",
           icon: "🚀",
